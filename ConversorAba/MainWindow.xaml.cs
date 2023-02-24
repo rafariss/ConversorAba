@@ -71,8 +71,8 @@ namespace ConversorAba
             }
             else
             {
-                string parte1 = hexa.Substring(0, 2);
-                string parte2 = hexa.Substring(2, 4);
+                string parte1 = hexa.Substring(1, 2);
+                string parte2 = hexa.Substring(3, 4);
 
                 string part1_conv = parte1.Substring(0, 2);
                 string part2_conv = parte2.Substring(0, 4);
@@ -80,7 +80,20 @@ namespace ConversorAba
                 int dec1 = Convert.ToInt32(part1_conv, toBase);
                 int dec2 = Convert.ToInt32(part2_conv, toBase);
 
-                lbWiegand.Content = dec1 + "-" + dec2;
+                string str1 = Convert.ToString(dec1);
+                string str2 = Convert.ToString(dec2);
+
+                if(str1.Length <= 2 || str2.Length <= 2)
+                {
+                    lbWiegand.Content = "0" + dec1 + "-" + "0" + dec2;
+
+                }
+                else
+                {
+                    lbWiegand.Content = dec1 + "-" + dec2;
+                }
+
+                
             }
            
 
