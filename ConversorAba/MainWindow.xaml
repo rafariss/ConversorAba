@@ -5,15 +5,47 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ConversorAba"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <Image x:Name="img1" HorizontalAlignment="Left" Height="386" VerticalAlignment="Top" Width="649" Source="/cartao.png"/>
-        <Label x:Name="lb1" Content="Serial:" HorizontalAlignment="Left" Margin="41,260,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.382,-0.538"/>
-        <Label x:Name="lb2" Content="" HorizontalAlignment="Left" Margin="87,260,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="tb1" HorizontalAlignment="Left" Margin="573,110,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="123" Height="22" TextChanged="tb1_TextChanged"/>
-        <Label x:Name="lb3" Content="Serial:" HorizontalAlignment="Left" Margin="532,106,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.382,-0.538"/>
-        <Button x:Name="bt1" Content="Converter" HorizontalAlignment="Left" Margin="573,314,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="lb3_Copy" Content="Abatrack:" HorizontalAlignment="Left" Margin="532,153,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.382,-0.538"/>
+        Title="MainWindow" Height="345" Width="723">
+    <Grid Margin="0,0,0,4">
+        <Image x:Name="img1" HorizontalAlignment="Left" Height="386" VerticalAlignment="Top" Width="649" Source="/cartao.png" Margin="5,-12,0,0"/>
+        <Label x:Name="lb1" Content="Serial:" HorizontalAlignment="Left" Margin="37,221,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.382,-0.538"/>
+        <Label x:Name="lbAbatrack" Content="" HorizontalAlignment="Left" Margin="97,187,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.752,-0.69">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.964"/>
+                    <TranslateTransform X="-0.524" Y="-0.035"/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <TextBox x:Name="tbAbatrack" HorizontalAlignment="Left" Margin="534,110,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="123" Height="22" TextChanged="tb1_TextChanged"/>
+        <Button x:Name="bt1" Content="Converter" HorizontalAlignment="Left" Margin="579,264,0,0" VerticalAlignment="Top" Click="bt1_Click"/>
+        <Label x:Name="lb3_Copy" Content="Abatrack:" HorizontalAlignment="Left" Margin="470,106,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.382,-0.538"/>
+        <Label x:Name="lb5" Content="Abatrack:" HorizontalAlignment="Left" Margin="33,189,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.382,-0.538"/>
+        <Label x:Name="lb1_Copy" Content="Wiegand:" HorizontalAlignment="Left" Margin="38,251,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.382,-0.538"/>
+        <Label x:Name="lbSerial" Content="" HorizontalAlignment="Left" Margin="84,220,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.752,-0.69">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.964"/>
+                    <TranslateTransform X="-0.524" Y="-0.035"/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <Label x:Name="lbWiegand" Content="" HorizontalAlignment="Left" Margin="102,247,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.752,-0.69">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.964"/>
+                    <TranslateTransform X="-0.524" Y="-0.035"/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <Label x:Name="lbCabecalho" Content="Insira o valor Abatrack" HorizontalAlignment="Left" Margin="470,75,0,0" VerticalAlignment="Top"/>
+        <Label Content="Criado por Rafael D Rissmann" HorizontalAlignment="Left" Margin="11,25,0,0" VerticalAlignment="Top" FontFamily="Brush Script MT" FontSize="8"/>
 
     </Grid>
 </Window>
